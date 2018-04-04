@@ -84,12 +84,12 @@ int main (int argc, const char *argv[])
 		EVP_CIPHER_CTX_cleanup (&ctx);
 			
 		//print curret key and its corresponding ciphertext
-		printf ("The key is : %s       The Corresponding Cipher Text Is:  ", key); 
-		for(int j = 0; j < outlen; j++) // Use a loop to print out the buffer
-		{
-			printf ("%x", outbuf[j]);
-		}
-		printf ("\n");
+//		printf ("The key is : %s       The Corresponding Cipher Text Is:  ", key); 
+//		for(int j = 0; j < outlen; j++) // Use a loop to print out the buffer
+//	{
+//			printf ("%x", outbuf[j]);
+//		}
+//		printf ("\n");
 		
 	
 //		for(int q = 0; q < outlen; q++)
@@ -118,7 +118,7 @@ int main (int argc, const char *argv[])
 			printf ("\n");
 			
 			/* Print the length of the ciphertext */
-			printf("Cipher length is: \n %s \n", sizeof(ciphertext));
+			printf("Cipher length is: \n %lu \n", sizeof(ciphertxt));
 			
 			printf ("\n*****************************************************\n");
 			return 0;

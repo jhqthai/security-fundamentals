@@ -118,7 +118,7 @@ int main (int argc, const char *argv[])
 			printf ("\n");
 			
 			/* Print the length of the ciphertext */
-			printf("Cipher length is: \n %s \n", sizeof(ciphertext));
+			printf("Cipher length is: \n %lu \n", sizeof(ciphertxt));
 			
 			printf ("\n*****************************************************\n");
 			return 0;
