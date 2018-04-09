@@ -105,6 +105,7 @@ int main (int argc, const char *argv[])
 		  else
 		  {
 		    match = false;
+		    // Break out of current key when does not match
         break;
       } 
 		}
@@ -132,6 +133,7 @@ int main (int argc, const char *argv[])
 			printf ("\n");
 			
 			/* Print the length of the ciphertext */
+			// TODO: Fix this up properly later
 			printf("\nThe Cipher length is: %lu \n", sizeof(ciphertxt));
 			
 			printf ("\n*****************************************************\n");
