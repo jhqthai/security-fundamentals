@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 de2a9c30718c062a7ef0bc9c72565a1c9af49b42 Security Fundamentals <secfun@ubuntu.(none)> 1522814809 -0700	clone: from https://github.com/brontythai/security-fundamentals.git
+de2a9c30718c062a7ef0bc9c72565a1c9af49b42 43748c24c7c239d18d63c93d06b72dfd94b01630 bronty thai <dung.q.thai@student.uts.edu.au> 1522815150 -0700	commit: initial commit
+43748c24c7c239d18d63c93d06b72dfd94b01630 aaffda65e11832c180920b1e1c117a03f22264f6 bronty thai <dung.q.thai@student.uts.edu.au> 1522817332 -0700	commit: first completion
+aaffda65e11832c180920b1e1c117a03f22264f6 3f3ebbac6ceb96a952addbcbc2dee2dac336227f bronty thai <dung.q.thai@student.uts.edu.au> 1522818541 -0700	commit: comparing part need fixes
+3f3ebbac6ceb96a952addbcbc2dee2dac336227f 12a6ca62cd2046ba3c2bd8a939f257b8f370bb73 bronty thai <dung.q.thai@student.uts.edu.au> 1522923623 -0700	commit: final print statements not pretty
+12a6ca62cd2046ba3c2bd8a939f257b8f370bb73 fd1420a07e85bf068cabf13b2513f1096feca836 bronty thai <dung.q.thai@student.uts.edu.au> 1522983887 -0700	commit: output humanreadable message
+fd1420a07e85bf068cabf13b2513f1096feca836 0fdec140acbbbcf71a7703129965a8bb1e8094bd bronty thai <dung.q.thai@student.uts.edu.au> 1523088763 -0700	commit: testing match
+0fdec140acbbbcf71a7703129965a8bb1e8094bd 6bd8e5769a626d5c3be6e831433171e9d3b0f947 bronty thai <dung.q.thai@student.uts.edu.au> 1523088899 -0700	commit: testing match
+6bd8e5769a626d5c3be6e831433171e9d3b0f947 06db776c1174bef01d52603bfc95b288d9f56a5c bronty thai <dung.q.thai@student.uts.edu.au> 1523259052 -0700	pull: Fast-forward
+06db776c1174bef01d52603bfc95b288d9f56a5c 2b6b6f92886648c508451df60b82f8f24e323162 bronty thai <dung.q.thai@student.uts.edu.au> 1523259990 -0700	commit: update comments

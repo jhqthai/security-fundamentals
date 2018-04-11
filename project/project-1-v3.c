@@ -9,6 +9,7 @@ int main (int argc, const char *argv[])
 {
   bool match;
 	/* This variable is used to store the ciphertext provided to you. Make sure to use the proper format, eg. the hex 'd23a' would be written as {0xd2,0x3a} in C */
+	// 2075386b75eed8b4f2b4a9c9b76967d072fe22daca7b8f5a56d16ce6ee483b59
 	unsigned char ciphertxt[] = {0x20, 0x75, 0x38, 0x6b, 0x75, 0xee, 0xd8, 0xb4, 0xf2, 0xb4, 0xa9, 0xc9, 0xb7, 0x69, 0x67, 0xd0, 0x72, 0xfe, 0x22, 0xda, 0xca, 0x7b, 0x8f, 0x5a, 0x56, 0xd1, 0x6c, 0xe6, 0xee, 0x48, 0x3b, 0x59};
 	
 
@@ -100,11 +101,14 @@ int main (int argc, const char *argv[])
 			// TODO: Match the whole thing instead of just 1 bit lol you retard
 			
 			// If match, continue, till null
+			// If matched, and end of array, breakout
 			if(ciphertxt[q] == outbuf[q])
 		    match = true;
+		    if (q
 		  else
 		  {
 		    match = false;
+		    // Break out of current key when does not match
         break;
       } 
 		}
@@ -132,6 +136,7 @@ int main (int argc, const char *argv[])
 			printf ("\n");
 			
 			/* Print the length of the ciphertext */
+			// TODO: Fix this up properly later
 			printf("\nThe Cipher length is: %lu \n", sizeof(ciphertxt));
 			
 			printf ("\n*****************************************************\n");

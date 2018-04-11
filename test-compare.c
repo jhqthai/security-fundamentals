@@ -7,7 +7,7 @@ int main (int argc, const char *argv[])
 
   // File print stuff
   FILE *fptr;
-  fptr = fopen("/home/secfun/security-fundamentals/outfile.txt", "w");
+  fptr = fopen("/home/john/security-fundamentals/outfile-compare.txt", "w+");
   // File print error check
   if(fptr == NULL)
   {
@@ -16,7 +16,7 @@ int main (int argc, const char *argv[])
   }
   
   unsigned char ciphertxt[] = {0x1,0x2,0x3,0x4,0x5};
-  unsigned char outbuf[] = {0x2,0x2,0x3,0x4,0x5};
+  unsigned char outbuf[] = {0x1,0x2,0x3,0x4,0x5};
   
   bool match;
   
@@ -26,7 +26,8 @@ int main (int argc, const char *argv[])
 		/* As the whole ciphertext cannot be matched at once, use this loop to match it bit by bit */		
 	  
 	  // File print test
-	  fprintf(fptr, "%x", outbuf[q]);
+	  fprintf(fptr, "%X", outbuf[q]);
+	  
 	  
 	  if(ciphertxt[q] == outbuf[q])
 	  { 
@@ -36,11 +37,11 @@ int main (int argc, const char *argv[])
 	  {
 	    match = false; 
 	    break;
-    }
+		}
+		
 	}
 	
 	// File print stuff
-	fprintf(fptr, "\n");
 	fclose(fptr);
   
   
