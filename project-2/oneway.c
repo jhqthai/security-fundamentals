@@ -226,7 +226,7 @@ int main (int argc, char *argv[])
 
 	printf("\nSelecting random string as M: %s", mess);
 	printf("\tDigest: ");
-  printf("WE HERE");
+  //printf("WE HERE");
 	for (i = 0; i < 3; i++)
 	{
 		printf("%02x ", mess_hash[i]);
@@ -235,7 +235,7 @@ int main (int argc, char *argv[])
 
 	count = 0;
 	
-  printf("WE HERE");
+  //printf("WE HERE");
   
 	// now generate strings using brute force apparoach starting with string length 1
 

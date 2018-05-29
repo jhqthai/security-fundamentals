@@ -1,15 +1,16 @@
-#include <stdio.h>
-#include "openssl/evp.h"
-#include <string.h>
-#include <time.h>
-#include <stdlib.h>
-#include <unistd.h>
 /*
  *
  * Compilation: gcc –o oneway oneway.c –lcrypto –ldl –std=c99
  * Acknowledgment: https://stackoverflow.com/questions/15767691/whats-the-c-library-function-to-generate-random-string - Random string gen
  *
 */
+
+#include <stdio.h>
+#include "openssl/evp.h"
+#include <string.h>
+#include <time.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 
 // generates random alphanumeric string of length len
@@ -225,7 +226,7 @@ int main (int argc, char *argv[])
 
 	printf("\nSelecting random string as M: %s", mess);
 	printf("\tDigest: ");
-  printf("WE HERE");
+  //printf("WE HERE");
 	for (i = 0; i < 3; i++)
 	{
 		printf("%02x ", mess_hash[i]);
@@ -234,7 +235,7 @@ int main (int argc, char *argv[])
 
 	count = 0;
 	
-  printf("WE HERE");
+  //printf("WE HERE");
   
 	// now generate strings using brute force apparoach starting with string length 1
 
