@@ -211,17 +211,18 @@ int main(int argc, char *argv[])
 		{
 			printf("IN REPOSITORY\n");
 			/* When match found from the repositary, print the two strings i.e. the random string and the repositary string which have the same hash values*/
-			printf("Random string: %s\n", mess);
+			printf("Random generated string: %s\n", mess);
 			//printf("Repository string: %s\n", rand_str);
 			printf("Repository string: ");
 			for(int l = 0; l < 7; l++)
-			  printf("%c", repo_msg[repo_index][l]);
+			  printf("%c", repo_msg[match][l]);
       printf("\n");
 
-      printf("REPO INDEX: %d\n", repo_index);
+      //printf("REPO INDEX: %d\n", repo_index);
+      //printf("MATCH number: %d\n", match);
 
 			/* Print the hash value of the randomly generated string in hexadecimal format */
-      printf("Random string hash value (hex): ");
+      printf("Randomly Generated Hash Value (hex): ");
       for(int k = 0; k < length; k++)
 			{
 			  printf("%x", rand_hash[k]);
@@ -229,10 +230,10 @@ int main(int argc, char *argv[])
 			printf("\n");
 			
 			//TODO: TEST
-      printf("REPO string hash value (hex): ");
+      printf("REPO String Hash Value (hex): ");
       for(int k = 0; k < length; k++)
 			{
-			  printf("%x", repo[repo_index+1][k]);
+			  printf("%x", repo[match][k]);
 			}
 			printf("\n");
 
