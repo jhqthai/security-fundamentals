@@ -1,9 +1,11 @@
 /*
- *
- * Compilation: gcc –o oneway oneway.c –lcrypto –ldl –std=c99
- * Acknowledgment: https://stackoverflow.com/questions/15767691/whats-the-c-library-function-to-generate-random-string - Random string gen
- *
-*/
+ * Compilation: gcc -o oneway oneway.c -lcrypto -ldl -std=c99
+ * Excution: ./oneway md5
+ * 
+ * Author: John Thai 11990405 & Lahiru Yapa 12043244
+ * Acknowledgment: https://stackoverflow.com/questions/15767691/whats-the-c-library-function-to-generate-random-string - Random string generate
+ * 
+ */
 
 #include <stdio.h>
 #include "openssl/evp.h"
@@ -145,7 +147,7 @@ int match_digest (char *hash1, char *hash2, int len)
 		int count = 0;
 		while(count < len)
 		{		
-		// If matched, increase count
+			// If matched, increase count
 			if(hash1[count] == hash2[count])
 			{
 				match = 1;
@@ -161,6 +163,7 @@ int match_digest (char *hash1, char *hash2, int len)
 			} 
 		}
 	}
+
 	if (match)
 		return 1; // Match found
 	return 0; // Match not found
@@ -218,15 +221,11 @@ int main (int argc, char *argv[])
 	mess = malloc(7);
 	gen_random(mess, 6); // Probs to randomly generate a user "password"
 	
-	//TODO: TEST
-	//printf("TEST MESSAGE: %s\n", mess);
-	
 	//generate hash for random string
 	generate_digest(mess, mess_hash, 3, hash_algo);
 
 	printf("\nSelecting random string as M: %s", mess);
 	printf("\tDigest: ");
-  //printf("WE HERE");
 	for (i = 0; i < 3; i++)
 	{
 		printf("%02x ", mess_hash[i]);
@@ -235,7 +234,6 @@ int main (int argc, char *argv[])
 
 	count = 0;
 	
-  //printf("WE HERE");
   
 	// now generate strings using brute force apparoach starting with string length 1
 
