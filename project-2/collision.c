@@ -1,8 +1,8 @@
 /*
- * Compilation: gcc –o collision collision.c –lcrypto –ldl –std=c99
+ * Compilation: gcc -o collision collision.c -lcrypto -ldl -std=c99
  * Excution: ./collision md5
  * 
- * 
+ * Author: John Thai 11990405 & Lahiru Yapa 12043244
  */
 
 #include <stdio.h>
@@ -186,18 +186,17 @@ int main(int argc, char *argv[])
 
 		if(match == 1) //check the match found. 
 		{
-			//TODO: TEST
-			printf("IN NONE REPO!\n");
 			/* When match found print the two strings i.e. the initial string and the randomly generated string which have the same hash values*/
-			printf("Initial string: %s\n", mess);
-			printf("Random generated string: %s\n", rand_str);
+			printf("Initial String: %s\n", mess);
+			printf("Random Generated String: %s\n", rand_str);
 
 			/* Print the hash value of the randomly generated string in hexadecimal format */
-      		printf("Random generated string hash value: ");
+      		printf("Random Generated String Hash Value: ");
+
+			// Loop through all value in rand_hash array
 			for(i = 0; i < length; i++)
-			{
-			  printf("%x", rand_hash[i]);
-			}
+				printf("%x", rand_hash[i]);
+
 			printf("\n");
 			
 			/* Print the number of iterations used to find the match. */
@@ -208,35 +207,26 @@ int main(int argc, char *argv[])
 		match = -1, // match_repo may return actual index
 		match = match_repo (repo, repo_index, rand_hash);// This statement compares the random String's hash with the repository storing all the generated strings' hash 
 
-//If the random string's hash matches with the ones in the repository, match becomes positive
+		//If the random string's hash matches with the ones in the repository, match becomes positive
 		if(match >= 0)
 		{
-			printf("IN REPOSITORY\n");
 			/* When match found from the repositary, print the two strings i.e. the random string and the repositary string which have the same hash values*/
-			printf("Random generated string: %s\n", rand_str);
-			//printf("Repository string: %s\n", rand_str);
-			printf("Repository string: ");
+			printf("Random Generated String: %s\n", rand_str);
+			printf("Repository String: ");
+
+			// Loop through all value in repo_msg array. 			
 			for(int l = 0; l < 7; l++)
-			  printf("%c", repo_msg[match][l]);
+				printf("%c", repo_msg[match][l]); // Print line where matched
+
       		printf("\n");
 
-			//printf("REPO INDEX: %d\n", repo_index);
-			//printf("MATCH number: %d\n", match);
-
 			/* Print the hash value of the randomly generated string in hexadecimal format */
-			printf("Random generated string hash value: ");
-			for(int k = 0; k < length; k++)
-			{
-			  printf("%x", rand_hash[k]);
-			}
-			printf("\n");
+			printf("Random Generated String Hash Value: ");
 			
-			//TODO: TEST
-			printf("REPO String Hash Value (hex): ");
+			// Loop through all value in rand_hash array
 			for(int k = 0; k < length; k++)
-			{
-			  printf("%x", repo[match][k]);
-			}
+				printf("%x", rand_hash[k]);
+
 			printf("\n");
 
 			/* Print the number of iterations used to find the match. */
