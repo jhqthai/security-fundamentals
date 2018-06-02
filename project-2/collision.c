@@ -200,7 +200,7 @@ int main(int argc, char *argv[])
 			printf("\n");
 			
 			/* Print the number of iterations used to find the match. */
-			printf("Iteration: %d", j);
+			printf("Number of Iteration(s): %d", j+1);
 			
 			break;
 		}
@@ -212,13 +212,7 @@ int main(int argc, char *argv[])
 		{
 			/* When match found from the repositary, print the two strings i.e. the random string and the repositary string which have the same hash values*/
 			printf("Random Generated String: %s\n", rand_str);
-			printf("Repository String: ");
-
-			// Loop through all value in repo_msg array. 			
-			for(int l = 0; l < 7; l++)
-				printf("%c", repo_msg[match][l]); // Print line where matched
-
-      		printf("\n");
+			printf("Repository String: %s\n", repo_msg[match]);
 
 			/* Print the hash value of the randomly generated string in hexadecimal format */
 			printf("Random Generated String Hash Value: ");
@@ -230,7 +224,7 @@ int main(int argc, char *argv[])
 			printf("\n");
 
 			/* Print the number of iterations used to find the match. */
-			printf("Iteration: %d", j);
+			printf("Number of Iteration(s): %d", j+1);
 			
 			break;
 		}
