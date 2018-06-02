@@ -236,7 +236,6 @@ int main (int argc, char *argv[])
 	
   
 	// now generate strings using brute force apparoach starting with string length 1
-
 	while(1)
 	{
 		count++;
