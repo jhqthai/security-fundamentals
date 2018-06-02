@@ -1,7 +1,8 @@
 /*
- *
  * Compilation: gcc –o collision collision.c –lcrypto –ldl –std=c99
  * Excution: ./collision md5
+ * 
+ * 
  */
 
 #include <stdio.h>
@@ -41,7 +42,7 @@ int match_digest (char *hash1, char *hash2, int len)
 		int count = 0;
 		while(count < len)
 		{		
-		// If matched, increase count
+			// If matched, increase count
 			if(hash1[count] == hash2[count])
 			{
 				match = 1;
@@ -57,6 +58,7 @@ int match_digest (char *hash1, char *hash2, int len)
 			} 
 		}
 	}
+
 	if (match)
 		return 1; // Match found
 	return 0; // Match not found
@@ -184,14 +186,14 @@ int main(int argc, char *argv[])
 
 		if(match == 1) //check the match found. 
 		{
-		  //TODO: TEST
-		  printf("IN NONE REPO!\n");
+			//TODO: TEST
+			printf("IN NONE REPO!\n");
 			/* When match found print the two strings i.e. the initial string and the randomly generated string which have the same hash values*/
 			printf("Initial string: %s\n", mess);
-			printf("Random string: %s\n", rand_str);
+			printf("Random generated string: %s\n", rand_str);
 
 			/* Print the hash value of the randomly generated string in hexadecimal format */
-      printf("Random string hash value (hex): ");
+      		printf("Random generated string hash value: ");
 			for(i = 0; i < length; i++)
 			{
 			  printf("%x", rand_hash[i]);
@@ -211,27 +213,27 @@ int main(int argc, char *argv[])
 		{
 			printf("IN REPOSITORY\n");
 			/* When match found from the repositary, print the two strings i.e. the random string and the repositary string which have the same hash values*/
-			printf("Random generated string: %s\n", mess);
+			printf("Random generated string: %s\n", rand_str);
 			//printf("Repository string: %s\n", rand_str);
 			printf("Repository string: ");
 			for(int l = 0; l < 7; l++)
 			  printf("%c", repo_msg[match][l]);
-      printf("\n");
+      		printf("\n");
 
-      //printf("REPO INDEX: %d\n", repo_index);
-      //printf("MATCH number: %d\n", match);
+			//printf("REPO INDEX: %d\n", repo_index);
+			//printf("MATCH number: %d\n", match);
 
 			/* Print the hash value of the randomly generated string in hexadecimal format */
-      printf("Randomly Generated Hash Value (hex): ");
-      for(int k = 0; k < length; k++)
+			printf("Random generated string hash value: ");
+			for(int k = 0; k < length; k++)
 			{
 			  printf("%x", rand_hash[k]);
 			}
 			printf("\n");
 			
 			//TODO: TEST
-      printf("REPO String Hash Value (hex): ");
-      for(int k = 0; k < length; k++)
+			printf("REPO String Hash Value (hex): ");
+			for(int k = 0; k < length; k++)
 			{
 			  printf("%x", repo[match][k]);
 			}
